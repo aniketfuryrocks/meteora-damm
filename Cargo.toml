@@ -1,0 +1,22 @@
+[workspace]
+members = ["programs/*", "dynamic-amm-quote", "common"]
+resolver = "2"
+
+[workspace.dependencies]
+# tracing
+anyhow = { version = "1.0.98" }
+
+# static
+lazy_static = { version = "1.5.0" }
+
+# anchor
+anchor-lang = { version = "0.29.0", features = ["event-cpi"] }
+anchor-spl = { version = "0.29.0" }
+
+# solana
+solana-sdk = { version = "1.18.16" }
+solana-program = { version = "1.18.16" }
+
+# programs
+dynamic-amm = { path = "./programs/dynamic-amm" }
+dynamic-vault = { path = "./programs/dynamic-vault" }

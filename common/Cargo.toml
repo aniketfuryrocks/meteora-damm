@@ -1,0 +1,26 @@
+[package]
+name = "common"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+devnet = []
+
+[dependencies]
+# anchor
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+
+# solana
+solana-sdk = { version = "1.18.16" }
+spl-associated-token-account = "2.2.0"
+
+# mpl
+mpl-token-metadata = "3.2.3"
+
+# programs
+dynamic-amm = { workspace = true }
+dynamic-vault = { workspace = true }
+
+# lazy 
+lazy_static = { workspace = true }
