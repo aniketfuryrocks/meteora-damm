@@ -109,21 +109,7 @@ pub struct Pool {
 }
 
 impl Pool {
-    pub const LEN: usize = 8
-        + (7 * 32)
-        + 1
-        + 1
-        + (2 * 32)
-        + 8
-        + 24
-        + 48
-        + 1
-        + 32
-        + 8
-        + Bootstrapping::LEN
-        + PartnerInfo::LEN
-        + Padding::LEN
-        + 9;
+    pub const LEN: usize = 1387;
 
     pub fn is_pool_enabled(&self) -> bool {
         self.enabled

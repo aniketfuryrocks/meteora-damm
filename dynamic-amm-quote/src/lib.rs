@@ -76,11 +76,11 @@ pub fn compute_quote(
         stake_data,
     } = quote_data;
 
-    if pool.is_pool_enabled() {
+    if !pool.is_pool_enabled() {
         anyhow::bail!("Pool is disabled");
     }
 
-    if pool.is_swap_enabled(&clock) {
+    if !pool.is_swap_enabled(&clock) {
         anyhow::bail!("Swap is disabled");
     }
 

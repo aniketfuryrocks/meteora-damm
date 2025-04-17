@@ -17,11 +17,7 @@ use crate::state::PoolFees;
 use anchor_lang::prelude::*;
 use instructions::*;
 
-#[cfg(feature = "staging")]
-solana_program::declare_id!("ammbh4CQztZ6txJ8AaQgPsWjd6o7GhmvopS2JAo5bCB");
-
-#[cfg(not(feature = "staging"))]
-solana_program::declare_id!("Eo7WjKq67rjJQSZxS6z3YkapzY3eMj6Xy8X5EQVn5UaB");
+solana_program::declare_id!("CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK");
 
 /// Program for AMM
 #[program]
