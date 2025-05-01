@@ -26,7 +26,7 @@ fn get_second_key(key1: Pubkey, key2: Pubkey) -> Pubkey {
 
 fn get_curve_type(curve_type: CurveType) -> u8 {
     match curve_type {
-        CurveType::ConstantProduct {} => 0,
+        CurveType::ConstantProduct => 0,
         _ => 1,
     }
 }

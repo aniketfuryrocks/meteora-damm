@@ -110,15 +110,15 @@ impl CurveType {
             (self, other),
             (CurveType::Stable { .. }, CurveType::Stable { .. })
                 | (
-                    CurveType::ConstantProduct { .. },
-                    CurveType::ConstantProduct { .. }
+                    CurveType::ConstantProduct,
+                    CurveType::ConstantProduct
                 )
         )
     }
     /// Get default fee settings
     pub fn get_default_fee(&self) -> PoolFees {
         match self {
-            CurveType::ConstantProduct {} => PoolFees {
+            CurveType::ConstantProduct => PoolFees {
                 trade_fee_numerator: CONSTANT_PRODUCT_TRADE_FEE_NUMERATOR,
                 trade_fee_denominator: FEE_DENOMINATOR,
                 protocol_trade_fee_numerator: CONSTANT_PRODUCT_PROTOCOL_TRADE_FEE_NUMERATOR,
@@ -136,7 +136,7 @@ impl CurveType {
     /// Get allowed trade fee bps
     pub fn get_allowed_trade_fee_bps(&self) -> &[u64] {
         match self {
-            CurveType::ConstantProduct {} => &[25, 100, 400, 600],
+            CurveType::ConstantProduct => &[25, 100, 400, 600],
             CurveType::Stable { .. } => &[1, 4, 10, 100],
         }
     }
