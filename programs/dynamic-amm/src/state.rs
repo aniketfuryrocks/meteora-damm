@@ -109,8 +109,6 @@ pub struct Pool {
 }
 
 impl Pool {
-    pub const LEN: usize = 1387;
-
     pub fn is_pool_enabled(&self) -> bool {
         self.enabled
     }
